@@ -1,0 +1,657 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #B8C0CC;
+    font-family: 'Ubuntu', 'Ubuntu Mono', monospace, 'Source Sans 3', Tahoma, sans-serif;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;
+    background-color: #0D1B2B;
+    max-height: 100px;
+    height: 100px;
+    padding: 0 10rem;
+}
+
+button {
+    background-color: #4c5c64;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: medium;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+    border: none;
+}
+
+button:active {
+    background-color: #303F4E;
+}
+
+.menu {
+    position: relative;
+    /* right: 15px; */
+    font-weight: bold;
+    font-size: small;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    display: inline;
+    margin-left: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+.menu a.active::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+.menu a:hover::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    /* Tamanho da linha (borda) */
+    background-color: #ffffff;
+    /* Cor da linha */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+    /* Efeito de transição */
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: medium;
+    color: white;
+    height: 100%;
+    text-decoration: none;
+}
+
+#title {
+    margin-left: 10px;
+}
+
+/* .scroll-reveal {
+    
+} */
+
+.scroll-reveal {
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s, transform 1s;
+}
+
+.scroll-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+#contact-form {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+/* input, */
+
+
+/* button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+} */
+
+/* button:hover {
+    background-color: #0056b3;
+} */
+
+/* Seção 1 */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: space-between;
+    height: 85vh;
+    /* background-color: red; */
+}
+
+.pai {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10% 0 10%;
+    width: 80%;
+    height: 100%;
+}
+
+.img1 {
+    border-radius: 60% 40% 37% 63% / 66% 66% 34% 34%;
+    width: 500px;
+}
+
+.filho1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    /* background-color: red; */
+}
+
+.filho1 h1 {
+    font-size: 3rem;
+}
+
+.filho2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    /* background-color: red; */
+}
+
+.but1 {
+    /* font-size: 15px; */
+    /* line-height: 19px; */
+    /* letter-spacing: -0.05em; */
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    background-color: #4c5c64;
+    box-shadow: hsla(0, 0%, 0%, 0.051) 0px 1px 3px;
+    padding: 1rem;
+    margin-top: 3rem;
+}
+
+.but1:hover {
+    background-color: #303F4E;
+}
+
+.social-media {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10% 0 10%;
+    /* background-color: aqua; */
+}
+
+.social-media p {
+    font-weight: bold;
+    font-size: large;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 15%;
+    /* margin-right: 10%; */
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 4rem 0 4rem 0;
+}
+
+.card img {
+    width: 40%;
+}
+
+.card-content-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+
+/* Estilização para a seção "content" */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: #0D131A;
+    /* padding: 40px; */
+    text-align: center;
+    width: 80%;
+    padding: 0 10% 10% 10%;
+    color: white;
+}
+
+.content h2 {
+    font-size: 3rem;
+    margin: 10% 0;
+}
+
+.content .img2,
+.content .img3,
+.content .img4 {
+    border-radius: 6px;
+
+}
+
+/* Estilização para a seção "container2" */
+.container2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ECEFF3;
+    width: 80%;
+    padding: 10%;
+    text-align: center;
+}
+
+.container2 h3 {
+    font-size: 3rem;
+    /* color: #333; */
+}
+
+.container2 img {
+    width: 35%;
+    height: auto;
+}
+
+.container2-content-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+    width: 50%;
+}
+
+/* Estilização para o rodapé (footer) */
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    height: 80vh;
+    padding: 0 10% 0 10%;
+    background-color: #0D1B2B;
+    color: #fff;
+    text-align: center;
+}
+
+
+
+/* .footer .socialmedia a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff;
+} */
+
+/* Estilização para o formulário de contato */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    height: 100%;
+    text-align: left;
+
+    /* margin: 10%; */
+}
+
+#contact-form label {
+    display: block;
+    margin-top: 20px;
+}
+
+#contact-form input {
+    height: auto;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: white;
+    color: black;
+    outline: none;
+    border: none;
+}
+
+#contact-form input::placeholder {
+    color: #7e8285b6;
+}
+
+#contact-form textarea {
+    border-radius: 8px;
+    padding: 15px;
+    background-color: white;
+    outline: none;
+    font-family: 'Ubuntu', 'Ubuntu Mono', monospace, 'Source Sans 3', Tahoma, sans-serif;
+}
+
+#contact-form textarea::placeholder {
+    color: #7e8285b6;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-align: left;
+    width: 50%;
+    height: 75%;
+    /* padding: 4rem 0; */
+}
+
+.footer-content h3 {
+    font-size: 3rem;
+}
+
+#email-footer {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.social-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+.mobile-menu {
+    width: 100%;
+    background-color: #0D1B2B;
+    display: none;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    /* Estilização para o cabecalho */
+
+    #header {
+        padding: 0 1rem;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    #title {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 95%;
+        cursor: pointer;
+        display: block;
+        padding-top: 10px;
+    }
+
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        list-style: none;
+        padding: 0 1.5rem;
+    }
+
+    .mobile-menu ul li {
+        margin: 0.4rem 0;
+        font-weight: bold;
+    }
+
+    .mobile-menu ul li a.active::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: white;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: width 0.3s ease-in-out;
+    }
+
+    .mobile-menu ul li a:hover::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        /* Tamanho da linha (borda) */
+        background-color: #ffffff;
+        /* Cor da linha */
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: width 0.3s ease-in-out;
+        /* Efeito de transição */
+    }
+
+    .open {
+        display: flex;
+        position: absolute;
+        justify-content: flex-end;
+        align-items: space-between;
+        margin-top: -2px;
+        z-index: 2;
+    }
+
+    .container {
+        height: fit-content;
+    }
+
+    .pai {
+        flex-direction: column;
+    }
+
+    .img1 {
+        width: 80%;
+        margin: 2rem 0;
+    }
+
+    .social-media {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .social-icons {
+        width: 33%;
+        justify-content: space-between;
+    }
+
+    /* Estilização para a seção "content" */
+    .content {
+        height: fit-content;
+    }
+
+    .card {
+        flex-direction: column-reverse;
+        margin: 0 0 4rem 0;
+        padding: 0;
+    }
+
+    .card img {
+        width: 100%;
+    }
+
+    .img2,
+    .img3,
+    .img4 {
+        order: 0;
+        margin-bottom: 30px;
+        width: 500px;
+    }
+
+    .card-content-text {
+        order: -1;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        font-size: 0.9rem;
+    }
+
+    .card-content-text p,
+    h3 {
+        padding: 0;
+        margin: 0 0 20px 0;
+    }
+
+    .card-content-text h3 {
+        padding: 0;
+        margin: 0 0 20px 0;
+        font-size: 1.5rem;
+    }
+
+    /* Estilização para a seção "container2" */
+
+    .container2 {
+        flex-direction: column-reverse;
+    }
+
+    .container2-content-text {
+        width: 100%;
+        margin: 4rem 0;
+    }
+
+    .container2-content-text p {
+        line-height: 2;
+        font-size: 0.9rem;
+    }
+
+    .container2-content-text h3 {
+        font-size: 1.8rem;
+    }
+
+    .container2 img {
+        width: 100%;
+        margin-bottom: 4rem;
+    }
+
+
+    /* Estilização para o rodapé */
+
+    .footer {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .footer-content {
+        width: 100%;
+        margin: 5rem 0;
+    }
+
+    .footer-content h3 {
+        font-size: 1.8rem;
+    }
+
+    .footer-content p {
+        font-size: 0.9rem;
+        margin: 3rem 0;
+    }
+
+    #contact-form {
+        width: 100%;
+        margin-bottom: 5rem;
+    }
+
+}
+
+/* #submit {
+    background-color: #4c5c64;
+    font-weight: bold;
+    font-size: large;
+    color: white;
+    margin-top: 20px;
+}
+
+#submit:hover {
+    background-color: #303F4E;
+} */
+
+/* .footer label {
+    display: block;
+    margin: 10px 0;
+} */
+
+/* .footer input[type="text"],
+.footer input[type="email"], */
+/* .footer textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+} */
+
+/* textarea {
+    margin-bottom: 16px;
+    padding: 8px;
+} */
+
+/* .footer button {
+    background-color: #f2f2f2;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+} */
+
+/* Rodapé de direitos autorais */
+/* .footer p {
+    margin-top: 20px;
+    font-size: 14px;
+} */
