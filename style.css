@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    background-color: #B8C0CC;
+    background-color: #ECEFF3;
     font-family: 'Ubuntu', 'Ubuntu Mono', monospace, 'Source Sans 3', Tahoma, sans-serif;
 }
 
@@ -11,14 +11,14 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-top: 0;
-    background-color: #0D1B2B;
+    background-color: #272121;
     max-height: 100px;
     height: 100px;
     padding: 0 10rem;
 }
 
 button {
-    background-color: #4c5c64;
+    background-color: rgb(75, 199, 248);
     border-radius: 8px;
     font-weight: bold;
     font-size: medium;
@@ -29,12 +29,11 @@ button {
 }
 
 button:active {
-    background-color: #303F4E;
+    background-color: rgb(36, 114, 145);
 }
 
 .menu {
     position: relative;
-    /* right: 15px; */
     font-weight: bold;
     font-size: small;
 }
@@ -72,14 +71,11 @@ a {
     display: block;
     width: 100%;
     height: 1px;
-    /* Tamanho da linha (borda) */
     background-color: #ffffff;
-    /* Cor da linha */
     position: absolute;
     bottom: 0;
     left: 0;
     transition: width 0.3s ease-in-out;
-    /* Efeito de transição */
 }
 
 #logo {
@@ -97,9 +93,6 @@ a {
     margin-left: 10px;
 }
 
-/* .scroll-reveal {
-    
-} */
 
 .scroll-reveal {
     position: relative;
@@ -112,7 +105,6 @@ a {
     opacity: 1;
     transform: translateY(0);
 }
-
 
 
 #contact-form {
@@ -130,29 +122,12 @@ label {
     margin-bottom: 8px;
 }
 
-/* input, */
-
-
-/* button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-} */
-
-/* button:hover {
-    background-color: #0056b3;
-} */
-
-/* Seção 1 */
 .container {
     display: flex;
     flex-direction: column;
     align-items: space-between;
     justify-content: space-between;
     height: 85vh;
-    /* background-color: red; */
 }
 
 .pai {
@@ -165,9 +140,15 @@ label {
 }
 
 .img1 {
-    border-radius: 60% 40% 37% 63% / 66% 66% 34% 34%;
-    width: 500px;
+
+    height: 400px;
+    padding-top: 35px;
+
 }
+
+
+
+
 
 .filho1 {
     display: flex;
@@ -175,12 +156,43 @@ label {
     justify-content: center;
     align-items: flex-start;
     height: 100%;
-    /* background-color: red; */
+
 }
 
 .filho1 h1 {
     font-size: 3rem;
+    max-width: 150%;
+    font-weight: normal;
+    -webkit-animation: blur-out-contract 3s cubic-bezier(0.550, 0.085, 0.680, 0.530) 2s alternate-reverse both;
+    animation: blur-out-contract 3s cubic-bezier(0.550, 0.085, 0.680, 0.530) 2s alternate-reverse both;
 }
+
+@-webkit-keyframes blur-out-contract {
+    0% {
+        -webkit-filter: blur(0.01);
+        filter: blur(0.01);
+    }
+
+    100% {
+        letter-spacing: -0.5em;
+        -webkit-filter: blur(12px) opacity(0%);
+        filter: blur(12px) opacity(0%);
+    }
+}
+
+@keyframes blur-out-contract {
+    0% {
+        -webkit-filter: blur(0.01);
+        filter: blur(0.01);
+    }
+
+    100% {
+        letter-spacing: -0.2em;
+        -webkit-filter: blur(12px) opacity(0%);
+        filter: blur(12px) opacity(0%);
+    }
+}
+
 
 .filho2 {
     display: flex;
@@ -188,25 +200,26 @@ label {
     justify-content: center;
     align-items: center;
     height: 80%;
-    /* background-color: red; */
+
 }
 
 .but1 {
-    /* font-size: 15px; */
-    /* line-height: 19px; */
-    /* letter-spacing: -0.05em; */
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: -0.05em;
+    background: rgb(75, 199, 248);
     font-weight: bold;
     text-align: center;
     transition: all 0.3s ease;
-    border-radius: 8px;
-    background-color: #4c5c64;
-    box-shadow: hsla(0, 0%, 0%, 0.051) 0px 1px 3px;
+    border-radius: 10px;
+    color: #272121;
+    box-shadow: hsla(0, 0%, 1%, 0.051) 0px 5px 3px;
     padding: 1rem;
     margin-top: 3rem;
 }
 
 .but1:hover {
-    background-color: #303F4E;
+    background-color: #464646;
 }
 
 .social-media {
@@ -215,7 +228,7 @@ label {
     align-items: center;
     justify-content: space-between;
     padding: 0 10% 0 10%;
-    /* background-color: aqua; */
+
 }
 
 .social-media p {
@@ -228,7 +241,7 @@ label {
     align-items: center;
     justify-content: space-between;
     width: 15%;
-    /* margin-right: 10%; */
+
 }
 
 .card {
@@ -252,13 +265,13 @@ label {
 }
 
 
-/* Estilização para a seção "content" */
+
 .content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-    background-color: #0D131A;
+    background-color: #272121;
     /* padding: 40px; */
     text-align: center;
     width: 80%;
@@ -278,7 +291,6 @@ label {
 
 }
 
-/* Estilização para a seção "container2" */
 .container2 {
     display: flex;
     align-items: center;
@@ -290,11 +302,13 @@ label {
 }
 
 .container2 h3 {
-    font-size: 3rem;
-    /* color: #333; */
+    font-size: 45px;
 }
-
+.container2 p{
+    font-size: 25px;
+}
 .container2 img {
+    border-radius: 6px;
     width: 35%;
     height: auto;
 }
@@ -308,7 +322,7 @@ label {
     width: 50%;
 }
 
-/* Estilização para o rodapé (footer) */
+
 .footer {
     display: flex;
     align-items: center;
@@ -316,20 +330,14 @@ label {
     width: 80%;
     height: 80vh;
     padding: 0 10% 0 10%;
-    background-color: #0D1B2B;
+    background-color: #272121;
     color: #fff;
     text-align: center;
 }
 
 
 
-/* .footer .socialmedia a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #fff;
-} */
 
-/* Estilização para o formulário de contato */
 #contact-form {
     display: flex;
     flex-direction: column;
@@ -338,7 +346,7 @@ label {
     height: 100%;
     text-align: left;
 
-    /* margin: 10%; */
+
 }
 
 #contact-form label {
@@ -380,7 +388,7 @@ label {
     text-align: left;
     width: 50%;
     height: 75%;
-    /* padding: 4rem 0; */
+
 }
 
 .footer-content h3 {
@@ -405,14 +413,13 @@ label {
 
 .mobile-menu {
     width: 100%;
-    background-color: #0D1B2B;
+    background-color: #000000;
     display: none;
 }
 
 
 
 @media screen and (max-width: 768px) {
-    /* Estilização para o cabecalho */
 
     #header {
         padding: 0 1rem;
@@ -473,14 +480,14 @@ label {
         display: block;
         width: 100%;
         height: 1px;
-        /* Tamanho da linha (borda) */
+
         background-color: #ffffff;
-        /* Cor da linha */
+
         position: absolute;
         bottom: 0;
         left: 0;
         transition: width 0.3s ease-in-out;
-        /* Efeito de transição */
+
     }
 
     .open {
@@ -515,7 +522,7 @@ label {
         justify-content: space-between;
     }
 
-    /* Estilização para a seção "content" */
+
     .content {
         height: fit-content;
     }
@@ -558,7 +565,7 @@ label {
         font-size: 1.5rem;
     }
 
-    /* Estilização para a seção "container2" */
+
 
     .container2 {
         flex-direction: column-reverse;
@@ -611,47 +618,3 @@ label {
     }
 
 }
-
-/* #submit {
-    background-color: #4c5c64;
-    font-weight: bold;
-    font-size: large;
-    color: white;
-    margin-top: 20px;
-}
-
-#submit:hover {
-    background-color: #303F4E;
-} */
-
-/* .footer label {
-    display: block;
-    margin: 10px 0;
-} */
-
-/* .footer input[type="text"],
-.footer input[type="email"], */
-/* .footer textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-} */
-
-/* textarea {
-    margin-bottom: 16px;
-    padding: 8px;
-} */
-
-/* .footer button {
-    background-color: #f2f2f2;
-    color: #333;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-} */
-
-/* Rodapé de direitos autorais */
-/* .footer p {
-    margin-top: 20px;
-    font-size: 14px;
-} */
